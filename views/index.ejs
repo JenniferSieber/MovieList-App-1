@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies To Watch</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src='js/main.js'></script>
+</head>
+
+<body>
+  <div class="app-container">
+    <nav>
+      <h1>The Movie List</h1>    
+    </nav>
+    <main>
+      <section class="add-movie">
+        <h2>Create your Movie Collection today:</h2>
+        <form action="/addMovie" method="POST">
+          <input type="text" name="movieName" placeholder="Movie Name">
+          <input type="text" name="genre" placeholder="Genre">
+          <input type="text" name="releaseYear" placeholder="Year of Release">
+          <input type="text" name="imgLink" placeholder="Movie Cover Image *">
+          <p> * Copy and paste the link address for Movie Cover Image you are adding from:
+            <a href="https://www.amazon.com/Movies-Films-DVD-TV/s?rh=n%3A2649512011%2Cp_n_format_browse-bin%3A2650304011" class="amazon-link" target="_blank">  Amazon Movies & DVD's </a>.
+          </p>
+          <input type="submit" class="submit" value="Add Movie">
+        </form>
+      </section>
+
+      <section class="movies-container">
+        <header>
+          <h2>The Current Movie List </h2>
+        </header>
+        <div class="movie-list-container">
+          <ul>
+
+            <% for(let i = 0; i < info.length; i++) { %>
+            <div class="movie-card">
+
+              <li data-movie-name="<%= info[i].movieName %>" data-genre="<%= info[i].genre %>"
+                data-release-year="<%= info[i].releaseYear %>" data-img-link="<%= info[i].imgLink %>"
+                data-likes="<%= info[i].likes %>">
+              
+                <span class='fa fa-thumbs-up'></span>
+                <span class="current-likes"><%= info[i].likes %> Likes</span>
+                <img src="<%= info[i].imgLink %>" class="movie-img" alt="<%= info[i].movieName %>">
+                <span class="movie-header"><%= info[i].movieName %></span>
+                <span class="genre-detail">genre - <%= info[i].genre %></span>
+                <span class="release-detail">release date - <%= info[i].releaseYear %></span>         
+                <span class='fa fa-trash'></span>
+              </li>
+            </div>
+            <% } %>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="get-img-link">
+        <span>
+          <a href="https://jennifersieber.netlify.app/" target="_blank">Created by: Jennifer Sieber &copy; 2023</a>
+        </span>
+      </section>
+    </footer>
+  </div>
+</body>
+
+</html>

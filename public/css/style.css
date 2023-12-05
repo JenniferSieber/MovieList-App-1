@@ -1,0 +1,202 @@
+:root {
+  --color-light: white;
+  --color-med: rgb(40, 40, 167);
+  --color-transprt-1: rgba(0, 0, 255, 0.3);
+  --color-dark: rgb(1, 1, 27);
+  --color-accent-1: rgb(255, 255, 0);
+  --color-accent-2: rgb(255, 0, 0);
+  --font-main: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  --font-accent: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 67.5%;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+/* .app-container, */
+main,
+form,
+li,
+.movie-header,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  font-size: 3rem;
+  text-align: center;
+  padding: .5rem 0;
+  color: var(--color-accent-1);
+  margin: 0 2rem;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+}
+
+main p {
+  margin: .5rem 0;
+  font-family: var(--font-accent);
+}
+
+main a {
+  text-decoration: none;
+  color: var(--color-light);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.75rem;
+  margin: .5rem 0;
+  text-transform: capitalize;
+}
+
+.add-movie {
+  background: var( --color-transprt-1);
+  padding: 2rem 8rem;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+}
+
+input {
+  font-size: 1.8rem;
+  margin: .5rem 0;
+  padding: 0 .5rem;
+  width: 28rem;
+  text-transform: capitalize;
+}
+
+input::placeholder {
+  font-size: 1rem;
+}
+
+.submit {
+  margin-top: .5rem;
+  display: block;
+  font-family: var(--font-main);
+  border: 2px solid var( --color-light);
+  border-radius: .5rem;
+  font-weight: bold;
+}
+
+.movies-container {
+  background: var(--color-light);
+  color: var(--color-dark);
+  margin: 0 2rem;
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+.movies-container h2 {
+  font-size: 2.75rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-card {
+  color: var(--color-dark);
+  width: 22rem;
+  margin: 1rem;
+  box-shadow: 1px 1px 8px 0 var( --color-transprt-1);
+  border-radius: .5rem;
+}
+
+li {
+  padding: .5rem;
+  list-style: none;
+}
+
+img {
+  margin: 1rem 0;
+  width: 15rem;
+  height: 17rem;
+  display: block;
+}
+
+span {
+  text-transform: capitalize;
+  display:  block;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.fa,
+.movie-header {
+  color: var( --color-med);
+}
+
+.fa {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.movie-header {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  height: 6rem;
+}
+
+footer {
+  background: var( --color-transprt-1);
+  color: var(--color-light);
+  padding: 2rem 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  text-decoration: none;
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  color: var(--color-light);
+}
+
+
+
+/* HOVER */
+a:hover {
+  color: var(--color-accent-1);
+}
+
+.submit:hover {
+  background: var(--color-accent-1);
+}
+
+.fa-trash:hover,
+.fa-thumbs-up:hover {
+  color: var(--color-accent-2);
+}
+
+
+
