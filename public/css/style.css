@@ -53,7 +53,6 @@ nav {
 
 main {
   flex: 1;
-  padding: 1rem;
 }
 
 main p {
@@ -99,6 +98,7 @@ input::placeholder {
   border: 2px solid var( --color-light);
   border-radius: .5rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .movies-container {
@@ -197,6 +197,7 @@ a:hover {
 .fa-thumbs-up:hover {
   color: var(--color-accent-2);
 }
+
 
 
 
