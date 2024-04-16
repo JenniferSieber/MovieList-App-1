@@ -78,5 +78,3 @@ app.delete('/deleteMovie', (req, res) => {
 app.listen(PORT || process.env.PORT, () => {
   console.log(`Server running on Port: ${PORT}`)
 })
-
-
