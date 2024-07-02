@@ -14,13 +14,13 @@ MongoClient.connect(dbString)
     db = client.db(dbName)
   })
 
-// --Middleware
+// Middleware
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-// --Routes
+// Routes
 app.get('/', (req, res) => {
   db.collection('movies').find().sort({ likes: -1 }).toArray()
     .then(data => {
@@ -74,7 +74,7 @@ app.delete('/deleteMovie', (req, res) => {
     .catch(err => console.error(err))
 })
 
-// --PORT Listener
+// PORT Listener
 app.listen(PORT || process.env.PORT, () => {
   console.log(`Server running on Port: ${PORT}`)
 })
