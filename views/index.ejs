@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="css/style.css">
   <script defer src='js/main.js'></script>
 </head>
-
 <body>
   <div class="app-container">
     <nav>
@@ -29,21 +28,17 @@
           <input type="submit" class="submit" value="Add Movie">
         </form>
       </section>
-
       <section class="movies-container">
         <header>
           <h2>The Current Movie List </h2>
         </header>
         <div class="movie-list-container">
           <ul>
-
             <% for(let i = 0; i < info.length; i++) { %>
             <div class="movie-card">
-
               <li data-movie-name="<%= info[i].movieName %>" data-genre="<%= info[i].genre %>"
                 data-release-year="<%= info[i].releaseYear %>" data-img-link="<%= info[i].imgLink %>"
                 data-likes="<%= info[i].likes %>">
-              
                 <span class='fa fa-thumbs-up'></span>
                 <span class="current-likes"><%= info[i].likes %> Likes</span>
                 <img src="<%= info[i].imgLink %>" class="movie-img" alt="<%= info[i].movieName %>">
@@ -67,5 +62,4 @@
     </footer>
   </div>
 </body>
-
 </html>
